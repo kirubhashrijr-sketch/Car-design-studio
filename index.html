@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AUTONEX | Premium Automotive Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            AUTO<span>NEX</span>
+        </a>
+
+        <nav class="navlinks">
+            <a href="#cars">Cars</a>
+            <a href="#tools">Tools</a>
+            <a href="#studio">Studio</a>
+            <a href="#compare">Compare</a>
+            <a href="#recommend">AI Match</a>
+            <a href="#garage">Garage</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="themeBtn">☾</button>
+
+            <button class="icon-btn" onclick="openModal('wishlistModal')">
+                ♡
+                <span class="badge" id="wishCount">0</span>
+            </button>
+
+            <button class="login-btn" id="profileBtn">
+                SIGN IN
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    THE FUTURE OF CAR BUYING
+                </span>
+
+                <h1>
+                    Find the car
+                    <span>that moves you.</span>
+                </h1>
+
+                <p>
+                    Discover, compare, configure and buy your next car
+                    with intelligent tools built around your budget,
+                    lifestyle and driving needs.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#cars" class="primary-btn">
+                        Explore Cars →
+                    </a>
+
+                    <a href="#recommend" class="secondary-btn">
+                        Find My Car
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85"
+                    alt="Premium sports car">
+
+                <div class="hero-overlay">
+
+                    <small>AUTONEX FEATURED</small>
+
+                    <strong>Porsche 911 Carrera</strong>
+
+                    <span>
+                        Performance without compromise.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>9+</strong>
+                <span>Featured Vehicles</span>
+            </div>
+
+            <div class="stat">
+                <strong>20+</strong>
+                <span>Smart Buying Tools</span>
+            </div>
+
+            <div class="stat">
+                <strong>360°</strong>
+                <span>Buying Experience</span>
+            </div>
+
+            <div class="stat">
+                <strong>AI</strong>
+                <span>Personal Recommendations</span>
+            </div>
+
+        </div>
+
+
+        <!-- ================= CARS ================= -->
+
+        <section id="cars">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">CURATED COLLECTION</div>
+                    <h2>Find your next car.</h2>
+                </div>
+
+                <p>
+                    Search premium, performance, luxury, family and
+                    electric vehicles based on your requirements.
+                </p>
+
+            </div>
+
+            <div class="filter-box">
+
+                <div class="filter-grid">
+
+                    <input
+                        class="input"
+                        id="searchInput"
+                        placeholder="Search car, brand or category..."
+                    >
+
+                    <select class="select" id="brandFilter">
+                        <option value="">All Brands</option>
+                    </select>
+
+                    <select class="select" id="typeFilter">
+                        <option value="">All Types</option>
+                        <option>Sedan</option>
+                        <option>SUV</option>
+                        <option>Sports</option>
+                        <option>Luxury</option>
+                        <option>EV</option>
+                    </select>
+
+                    <select class="select" id="fuelFilter">
+                        <option value="">All Fuel</option>
+                        <option>Petrol</option>
+                        <option>Diesel</option>
+                        <option>Electric</option>
+                        <option>Hybrid</option>
+                    </select>
+
+                    <select class="select" id="priceFilter">
+                        <option value="">Any Budget</option>
+                        <option value="10">Under ₹10L</option>
+                        <option value="20">Under ₹20L</option>
+                        <option value="40">Under ₹40L</option>
+                        <option value="100">Under ₹1Cr</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="car-grid" id="carGrid"></div>
+
+        </section>
+
+
+        <!-- ================= TOOLS ================= -->
+
+        <section id="tools">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">BUYING TOOLS</div>
+                    <h2>Everything before you buy.</h2>
+                </div>
+
+                <p>
+                    Complete car-buying tools in one premium platform.
+                </p>
+
+            </div>
+
+            <div class="tool-grid">
+
+                <div class="tool-card">
+                    <div class="tool-icon">💰</div>
+                    <h3>EMI Calculator</h3>
+                    <p>Calculate monthly car loan payments.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🧾</div>
+                    <h3>On-Road Price</h3>
+                    <p>Estimate the actual purchase cost.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">⛽</div>
+                    <h3>Fuel Cost</h3>
+                    <p>Calculate monthly running expenses.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🔋</div>
+                    <h3>EV Calculator</h3>
+                    <p>Estimate EV charging cost.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📈</div>
+                    <h3>Resale Value</h3>
+                    <p>Estimate future vehicle value.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🔄</div>
+                    <h3>Car Exchange</h3>
+                    <p>Estimate your old car value.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🛡️</div>
+                    <h3>Safety Score</h3>
+                    <p>Understand key safety features.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🌱</div>
+                    <h3>Eco Score</h3>
+                    <p>Compare efficiency and emissions.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CALCULATORS ================= -->
+
+        <section>
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">SMART CALCULATORS</div>
+                    <h2>Know your numbers.</h2>
+                </div>
+
+            </div>
+
+            <div class="calc-grid">
+
+                <!-- EMI -->
+
+                <div class="calc">
+
+                    <h3>💰 EMI Calculator</h3>
+
+                    <div class="form-group">
+                        <label>Car Price (₹)</label>
+                        <input class="input" id="emiPrice" type="number" value="2000000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Down Payment (₹)</label>
+                        <input class="input" id="emiDown" type="number" value="500000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Interest Rate (%)</label>
+                        <input class="input" id="emiRate" type="number" value="8.5">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Loan Tenure (Years)</label>
+                        <input class="input" id="emiYears" type="number" value="5">
+                    </div>
+
+                    <button class="primary-btn" onclick="calculateEMI()">
+                        Calculate EMI
+                    </button>
+
+                    <div class="result" id="emiResult">
+                        <small>Monthly EMI</small>
+                        <strong>₹0</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- ON ROAD -->
+
+                <div class="calc">
+
+                    <h3>🧾 On-Road Price</h3>
+
+                    <div class="form-group">
+                        <label>Ex-showroom Price</label>
+                        <input class="input" id="roadPrice" type="number" value="2000000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>RTO (%)</label>
+                        <input class="input" id="roadRto" type="number" value="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Insurance (₹)</label>
+                        <input class="input" id="roadInsurance" type="number" value="70000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Other Charges (₹)</label>
+                        <input class="input" id="roadOther" type="number" value="25000">
+                    </div>
+
+                    <button class="primary-btn" onclick="calculateRoadPrice()">
+                        Calculate
+                    </button>
+
+                    <div class="result" id="roadResult">
+                        <small>Estimated On-Road Price</small>
+                        <strong>₹0</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- FUEL -->
+
+                <div class="calc">
+
+                    <h3>⛽ Monthly Fuel Cost</h3>
+
+                    <div class="form-group">
+                        <label>Monthly KM</label>
+                        <input class="input" id="fuelKm" type="number" value="1500">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mileage (KM/L)</label>
+                        <input class="input" id="fuelMileage" type="number" value="15">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fuel Price (₹/L)</label>
+                        <input class="input" id="fuelPrice" type="number" value="105">
+                    </div>
+
+                    <button class="primary-btn" onclick="calculateFuel()">
+                        Calculate
+                    </button>
+
+                    <div class="result" id="fuelResult">
+                        <small>Estimated Monthly Cost</small>
+                        <strong>₹0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DESIGN STUDIO ================= -->
+
+        <section class="studio" id="studio">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">DESIGN STUDIO</div>
+                    <h2>Build your dream car.</h2>
+                </div>
+
+                <p>
+                    Select your model and exterior finish.
+                </p>
+
+            </div>
+
+            <div class="studio-box">
+
+                <div class="studio-preview">
+
+                    <img
+                        id="studioImg"
+                        src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1400&q=85"
+                        alt="Car configurator">
+
+                    <div class="studio-label">
+
+                        <small>AUTONEX CONFIGURATOR</small>
+
+                        <strong id="studioName">
+                            Mercedes-AMG GT
+                        </strong>
+
+                        <div id="studioColor">
+                            Obsidian Black
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="studio-panel">
+
+                    <h3>Select Model</h3>
+
+                    <div class="choice-grid">
+
+                        <button
+                            class="choice active"
+                            onclick="studioModel('Mercedes-AMG GT',this)">
+                            AMG GT
+                        </button>
+
+                        <button
+                            class="choice"
+                            onclick="studioModel('BMW M4 Competition',this)">
+                            BMW M4
+                        </button>
+
+                        <button
+                            class="choice"
+                            onclick="studioModel('Porsche 911',this)">
+                            911
+                        </button>
+
+                    </div>
+
+
+                    <h3>Exterior Finish</h3>
+
+                    <div class="swatches">
+
+                        <button
+                            class="swatch active"
+                            style="background:#101010"
+                            onclick="studioColor('Obsidian Black',this)">
+                        </button>
+
+                        <button
+                            class="swatch"
+                            style="background:#eeeeee"
+                            onclick="studioColor('Arctic White',this)">
+                        </button>
+
+                        <button
+                            class="swatch"
+                            style="background:#999"
+                            onclick="studioColor('Titanium Silver',this)">
+                        </button>
+
+                        <button
+                            class="swatch"
+                            style="background:#9d1e1e"
+                            onclick="studioColor('Racing Red',this)">
+                        </button>
+
+                        <button
+                            class="swatch"
+                            style="background:#273d52"
+                            onclick="studioColor('Deep Blue',this)">
+                        </button>
+
+                    </div>
+
+
+                    <div class="build-price">
+
+                        <span>ESTIMATED BUILD</span>
+
+                        <strong id="buildPrice">
+                            ₹2.50 Cr
+                        </strong>
+
+                        <div id="buildText">
+                            Mercedes-AMG GT • Obsidian Black
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="primary-btn"
+                        onclick="saveBuild()">
+                        ♡ Save Build
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COMPARE ================= -->
+
+        <section id="compare">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">COMPARE</div>
+                    <h2>Make the right decision.</h2>
+                </div>
+
+                <button class="secondary-btn" onclick="clearCompare()">
+                    Clear
+                </button>
+
+            </div>
+
+            <div class="compare-area" id="compareArea"></div>
+
+        </section>
+
+
+        <!-- ================= AI MATCH ================= -->
+
+        <section class="ai-section" id="recommend">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">AI CAR ADVISOR</div>
+                    <h2>Which car is right for you?</h2>
+                </div>
+
+                <p>
+                    Tell AUTONEX what you need and get your best match.
+                </p>
+
+            </div>
+
+            <div class="ai-box">
+
+                <div class="ai-form">
+
+                    <select class="select" id="aiBudget">
+                        <option value="10">Under ₹10L</option>
+                        <option value="20">Under ₹20L</option>
+                        <option value="40">Under ₹40L</option>
+                        <option value="100">Under ₹1Cr</option>
+                        <option value="1000">₹1Cr+</option>
+                    </select>
+
+                    <select class="select" id="aiPriority">
+                        <option value="family">Family & Comfort</option>
+                        <option value="mileage">Mileage</option>
+                        <option value="performance">Performance</option>
+                        <option value="electric">Electric</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="safety">Safety</option>
+                    </select>
+
+                    <button class="primary-btn" onclick="runAI()">
+                        Find My Car →
+                    </button>
+
+                </div>
+
+                <div class="ai-result" id="aiResult"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SMART INSIGHTS ================= -->
+
+        <section>
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">SMART INSIGHTS</div>
+                    <h2>Buy with confidence.</h2>
+                </div>
+
+            </div>
+
+            <div class="details-grid">
+
+                <div class="info-card">
+
+                    <h3>🛡️ Safety & Ownership</h3>
+
+                    <div class="info-row">
+                        <span>Airbags</span>
+                        <strong class="good">6+</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>ABS / EBD</span>
+                        <strong class="good">Available</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>ADAS</span>
+                        <strong class="good">Available</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Parking Assist</span>
+                        <strong class="good">Available</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Ownership Support</span>
+                        <strong class="good">AUTONEX</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>🌱 Driving Suitability</h3>
+
+                    <div class="info-row">
+                        <span>City Driving</span>
+                        <strong>★★★★★</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Highway</span>
+                        <strong>★★★★★</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Family</span>
+                        <strong>★★★★☆</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Performance</span>
+                        <strong>★★★★★</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Eco Friendly</span>
+                        <strong>★★★★☆</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GARAGE ================= -->
+
+        <section id="garage">
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">MY GARAGE</div>
+                    <h2>Your automotive space.</h2>
+                </div>
+
+                <p>
+                    Keep your saved cars, builds and test drives together.
+                </p>
+
+            </div>
+
+            <div class="garage">
+
+                <div class="garage-card">
+                    <h3>❤️ Saved Cars</h3>
+                    <p id="garageWishlist">0 cars saved</p>
+                </div>
+
+                <div class="garage-card">
+                    <h3>⚖️ Comparisons</h3>
+                    <p id="garageCompare">0 cars selected</p>
+                </div>
+
+                <div class="garage-card">
+                    <h3>🎨 Saved Builds</h3>
+                    <p id="garageBuild">No build saved yet</p>
+                </div>
+
+                <div class="garage-card">
+                    <h3>📅 Test Drives</h3>
+                    <p id="garageTestDrive">No booking yet</p>
+                </div>
+
+                <div class="garage-card">
+                    <h3>🔔 Price Alerts</h3>
+                    <p>Track your favourite cars.</p>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="showToast('Price alert activated!')">
+                        Activate Alert
+                    </button>
+                </div>
+
+                <div class="garage-card">
+                    <h3>📑 Car Report</h3>
+                    <p>Generate your buying report.</p>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="printReport()">
+                        Generate Report
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REVIEWS ================= -->
+
+        <section>
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">REVIEWS</div>
+                    <h2>What drivers say.</h2>
+                </div>
+
+            </div>
+
+            <div class="review-grid">
+
+                <div class="review">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “The comparison and EMI tools made it much easier
+                        to shortlist the right car.”
+                    </p>
+
+                    <strong>Arjun • BMW Owner</strong>
+
+                </div>
+
+                <div class="review">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        “I could compare running cost and features before
+                        visiting the dealer.”
+                    </p>
+
+                    <strong>Priya • SUV Owner</strong>
+
+                </div>
+
+                <div class="review">
+
+                    <div class="stars">★★★★☆</div>
+
+                    <p>
+                        “The AI recommendation gives a quick starting point
+                        when you don't know which model to choose.”
+                    </p>
+
+                    <strong>Rahul • EV Owner</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHECKLIST ================= -->
+
+        <section>
+
+            <div class="section-head">
+
+                <div>
+                    <div class="kicker">BEFORE YOU BUY</div>
+                    <h2>Your car buying checklist.</h2>
+                </div>
+
+            </div>
+
+            <div class="checklist">
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Compare at least 3 cars</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Check on-road price</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Calculate EMI</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Take a test drive</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Check insurance and warranty</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Verify dealer documents</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Check maintenance cost</span>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span>Finalize financing and purchase</span>
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <div class="cta">
+
+            <div class="cta-box">
+
+                <div>
+
+                    <h2>
+                        Your next car<br>
+                        starts here.
+                    </h2>
+
+                    <p>
+                        Explore. Compare. Calculate. Configure. Buy smarter.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-btn"
+                    onclick="openModal('testDriveModal')">
+                    Book Test Drive →
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+            © 2026 AUTONEX. Premium Automotive Platform.
+        </div>
+
+        <div>
+            Explore • Compare • Configure • Buy
+        </div>
+
+    </footer>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <div class="modal" id="loginModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeModal('loginModal')">
+                ×
+            </button>
+
+            <h2>Welcome to AUTONEX</h2>
+
+            <p class="modal-sub">
+                Sign in to save cars, builds and your buying journey.
+            </p>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input
+                    class="input"
+                    id="loginName"
+                    placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input
+                    class="input"
+                    id="loginPhone"
+                    placeholder="10 digit mobile number">
+            </div>
+
+            <div class="form-group">
+                <label>OR Email Address</label>
+                <input
+                    class="input"
+                    id="loginEmail"
+                    placeholder="you@example.com">
+            </div>
+
+            <p id="loginError" class="error-text"></p>
+
+            <button
+                class="primary-btn"
+                onclick="loginUser()">
+                Continue →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= WISHLIST MODAL ================= -->
+
+    <div class="modal" id="wishlistModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeModal('wishlistModal')">
+                ×
+            </button>
+
+            <h2>♡ Your Wishlist</h2>
+
+            <p class="modal-sub">
+                Your saved vehicles.
+            </p>
+
+            <div id="wishlistArea"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DETAILS MODAL ================= -->
+
+    <div class="modal" id="detailsModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeModal('detailsModal')">
+                ×
+            </button>
+
+            <div id="detailsContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TEST DRIVE ================= -->
+
+    <div class="modal" id="testDriveModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeModal('testDriveModal')">
+                ×
+            </button>
+
+            <h2>📅 Book a Test Drive</h2>
+
+            <p class="modal-sub">
+                Choose your preferred test-drive experience.
+            </p>
+
+            <div class="modal-grid">
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input class="input" id="tdName" placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input class="input" id="tdPhone" placeholder="Mobile number">
+                </div>
+
+                <div class="form-group">
+                    <label>Car</label>
+
+                    <select class="select" id="tdCar">
+                        <option>BMW M4 Competition</option>
+                        <option>Mercedes-AMG GT 63</option>
+                        <option>Porsche 911 Carrera</option>
+                        <option>Tesla Model 3</option>
+                        <option>Range Rover Sport</option>
+                        <option>Audi RS e-tron GT</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Experience</label>
+
+                    <select class="select" id="tdType">
+                        <option>Dealer Test Drive</option>
+                        <option>Home Test Drive</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Date</label>
+
+                    <input
+                        class="input"
+                        id="tdDate"
+                        type="date">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Preferred Time</label>
+
+                    <select class="select" id="tdTime">
+                        <option>10:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>6:00 PM</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button
+                class="primary-btn"
+                onclick="bookTestDrive()">
+                Confirm Test Drive
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DEALER ================= -->
+
+    <div class="modal" id="dealerModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeModal('dealerModal')">
+                ×
+            </button>
+
+            <h2>📍 Find a Dealer</h2>
+
+            <p class="modal-sub">
+                Select a location to discover dealer options.
+            </p>
+
+            <select class="select" id="dealerCity">
+
+                <option>Chennai</option>
+                <option>Coimbatore</option>
+                <option>Bengaluru</option>
+                <option>Hyderabad</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+
+            </select>
+
+            <div class="result">
+
+                <strong>AUTONEX Partner Dealer</strong>
+
+                <p>Premium Automotive Showroom</p>
+
+                <p>📞 +91 90000 00000</p>
+
+                <p>🕒 9:00 AM – 8:00 PM</p>
+
+            </div>
+
+            <button
+                class="primary-btn"
+                onclick="showToast('Dealer enquiry sent!');closeModal('dealerModal')">
+                Contact Dealer
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CALLBACK ================= -->
+
+    <div class="modal" id="callbackModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeModal('callbackModal')">
+                ×
+            </button>
+
+            <h2>📞 Talk to an Expert</h2>
+
+            <p class="modal-sub">
+                Our automotive advisor will contact you.
+            </p>
+
+            <input
+                class="input"
+                id="callbackName"
+                placeholder="Your name">
+
+            <br><br>
+
+            <input
+                class="input"
+                id="callbackPhone"
+                placeholder="Phone number">
+
+            <br><br>
+
+            <button
+                class="primary-btn"
+                onclick="requestCallback()">
+                Request Callback
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DAMAGE DETECTOR ================= -->
+
+    <div class="modal" id="damageModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeModal('damageModal')">
+                ×
+            </button>
+
+            <h2>📸 AI Damage Detector</h2>
+
+            <p class="modal-sub">
+                Upload a vehicle image for inspection.
+            </p>
+
+            <input
+                type="file"
+                accept="image/*"
+                class="input"
+                id="damageFile">
+
+            <div id="damagePreview"></div>
+
+            <button
+                class="primary-btn modal-margin"
+                onclick="analyzeDamage()">
+                Analyze Image
+            </button>
+
+            <div id="damageResult"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
